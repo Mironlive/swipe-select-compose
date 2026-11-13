@@ -27,7 +27,7 @@
 - **Plays well with your ViewModel.** `onChange` fires once per gesture.
 - **Tiny.** Depends only on `compose-foundation`.
 
-> Also available for [React Native](https://github.com/Mironlive/swipe-select), [Flutter](https://pub.dev/packages/swipe_select) and [SwiftUI](https://github.com/Mironlive/swipe-select-swiftui).
+> Also available for [React Native](https://www.npmjs.com/package/@mironlive/react-native-swipe-select), [Flutter](https://pub.dev/packages/swipe_select) and [SwiftUI](https://github.com/Mironlive/swipe-select-swiftui).
 
 ## Installation
 

@@ -27,7 +27,7 @@
 - **Дружит с ViewModel.** `onChange` вызывается один раз за жест.
 - **Лёгкая.** Зависит только от `compose-foundation`.
 
-> Есть версии для [React Native](https://github.com/Mironlive/swipe-select), [Flutter](https://pub.dev/packages/swipe_select) и [SwiftUI](https://github.com/Mironlive/swipe-select-swiftui).
+> Есть версии для [React Native](https://www.npmjs.com/package/@mironlive/react-native-swipe-select), [Flutter](https://pub.dev/packages/swipe_select) и [SwiftUI](https://github.com/Mironlive/swipe-select-swiftui).
 
 ## Установка
 
