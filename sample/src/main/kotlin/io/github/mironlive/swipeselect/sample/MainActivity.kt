@@ -195,7 +195,10 @@ private fun GridDemo() {
         ) {
             items(count, key = { it }) { i ->
                 val selected = state.isSelected(i)
-                Box(Modifier.aspectRatio(1f).background(Color.hsv(((i * 37) % 360).toFloat(), 0.45f, 0.9f))) {
+                Box(
+                    Modifier.aspectRatio(1f).background(Color.hsv(((i * 37) % 360).toFloat(), 0.45f, 0.9f))
+                        .clickable(enabled = state.isSelectionMode) { state.toggle(i) },
+                ) {
                     if (selected) {
                         Box(Modifier.fillMaxSize().background(Color.White.copy(alpha = 0.3f)))
                         Icon(Icons.Filled.CheckCircle, null, tint = Color(0xFF1E66F5),
@@ -231,6 +234,7 @@ private fun ChatDemo() {
                 val selected = state.isSelected(id)
                 Row(
                     Modifier.fillMaxWidth().background(if (selected) Color(0xFFE3EDFF) else Color.Transparent)
+                        .clickable(enabled = state.isSelectionMode) { state.toggle(id) }
                         .padding(horizontal = 12.dp, vertical = 3.dp),
                     horizontalArrangement = if (mine) Arrangement.End else Arrangement.Start,
                 ) {
@@ -270,7 +274,8 @@ private fun HorizontalDemo() {
                 Box(
                     Modifier.width((90 + (i * 13) % 50).dp).height(160.dp)
                         .background(Color.hsv(((i * 29) % 360).toFloat(), 0.5f, 0.85f), RoundedCornerShape(14.dp))
-                        .border(4.dp, if (selected) Color(0xFF1E66F5) else Color.Transparent, RoundedCornerShape(14.dp)),
+                        .border(4.dp, if (selected) Color(0xFF1E66F5) else Color.Transparent, RoundedCornerShape(14.dp))
+                        .clickable(enabled = state.isSelectionMode) { state.toggle(i) },
                     contentAlignment = Alignment.Center,
                 ) {
                     Text("${i + 1}", color = Color.White, fontWeight = FontWeight.Bold, style = MaterialTheme.typography.headlineSmall)
